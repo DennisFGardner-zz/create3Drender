@@ -27,8 +27,8 @@ P.b = 1;
 P.c = 0.01; 
 P.d = 0.02; 
 P.e = 0; 
-% decimal percentage of background
-P.bkg = 0.1; 
+% decimal percentage of white gaussian noise
+P.wgnPercent = 0.1; 
 
 % Suface deminsons
 dims = [80, 100];

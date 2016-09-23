@@ -36,7 +36,7 @@ Z = P.a*X + P.b*Y+ P.c*X.^2 + P.d*Y.^2 + P.e;
 Zrange = max(Z(:)) - min(Z(:)); 
 
 % add random gaussian noise to the image
-Z = Z + P.bkg*Zrange*randn(dims);
+Z = Z + P.wgnPercent*Zrange*randn(dims);
 
 %---%%---%%---%%---%%---%%---%%---%%---%%---%%---%%---%%---%%---%%---%%---%
 % Optional, if plotOpt = 'yes' then plot Z as an image                   %%
