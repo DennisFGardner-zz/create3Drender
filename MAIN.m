@@ -1,9 +1,10 @@
 %% MAIN - Plane Fitting Tool
 %
-% In the first part of this script, test data is generated. This test data
-% is fitted to a 2nd order plane. 
+% Table of Contents:
+%   1) Simulated data is generated. This simulated data is used to test the
+%   2nd order plane plane fitting tool.
 %
-% In the second part of this script, real data is loaded and fitted. 
+%   2) Real data is loaded and fitted. 
 
 % Author: Dennis F Gardner
 % JILA, Univeristy of Colorado, 440 UCB, Boulder, CO 80309
@@ -13,18 +14,12 @@
 % File Creation: Sept. 1st, 2016
 % Modifications: Sept. 23, 2016
 
-%% Preamble
 
-% change the working directory
-cd('C:\Users\Gardner\Documents\MATLAB\PlaneFit\planeFitTool');
-
-% clear variable, close all figures and clear the Command Window
-clearvars;
-close all;
-clc;
-
-%% Generate linear phase and bow profile (with white gaussian noise)
-% equation of profile: Z = a*X + b*Y+ c*X.^2 + d*Y.^2 + e;
+%% 1) Generate simulated data
+% generate a 2nd order plane, add nosie if desired
+% equation of plane: Z = a*X + b*Y+ c*X.^2 + d*Y.^2 + e;
+%
+% What about X*Y?
 
 % equation parameters and background value
 P.a = 5; % a*X
