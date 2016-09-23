@@ -21,6 +21,9 @@
 %
 % What about X*Y? - should this be added too?
 
+% Plane size [numberRows numberColumns]
+dims = [80, 100];
+
 % equation parameters
 P.a = 5; 
 P.b = 1; 
@@ -30,16 +33,12 @@ P.e = 0;
 % decimal percentage of white gaussian noise
 P.wgnPercent = 0.1; 
 
-% Suface deminsons
-dims = [80, 100];
-
 % generate the phase profile, including noise, option to plot
 plotOpt = 'yes';
 Z = genPhaseImage(dims, P, plotOpt); 
 
 clear dims P plotOpt
 
-%%
 % select only certain points
 % image is shown with axis set to 'xy'
 [ xROIpts, yROIpts, zROIpts ] = selectROIs( Z );
