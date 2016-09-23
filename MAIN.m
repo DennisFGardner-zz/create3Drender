@@ -19,25 +19,27 @@
 % generate a 2nd order plane, add nosie if desired
 % equation of plane: Z = a*X + b*Y+ c*X.^2 + d*Y.^2 + e;
 %
-% What about X*Y?
+% What about X*Y? - should this be added too?
 
-% equation parameters and background value
-P.a = 5; % a*X
-P.b = 1; % b*Y
-P.c = 0.01; % c*X.^2
-P.d = 0.02; % d*Y.^2
-P.e = 0; % offset
-P.bkg= 0; % decimal percentage of background
+% equation parameters
+P.a = 5; 
+P.b = 1; 
+P.c = 0.01; 
+P.d = 0.02; 
+P.e = 0; 
+% decimal percentage of background
+P.bkg = 0.1; 
 
 % Suface deminsons
 dims = [80, 100];
 
 % generate the phase profile, including noise, option to plot
-plotOpt = 'no';
+plotOpt = 'yes';
 Z = genPhaseImage(dims, P, plotOpt); 
 
 clear dims P plotOpt
 
+%%
 % select only certain points
 % image is shown with axis set to 'xy'
 [ xROIpts, yROIpts, zROIpts ] = selectROIs( Z );
