@@ -2,7 +2,7 @@ function [ Z ] = genPhaseImage(dims, P, plotOpt )
 %genPhaseImage - generate a 2nd order surface
 %   This is sample data for the surface fitting script. This code generates
 %   a surface profile given by:
-%             Z = a*X + b*Y + c*X.^2 + d*Y.^2 + e;
+%             Z(X, Y) = p00 + p10*x + p01*y + p20*x^2 + p11*x*y + p02*y^2;
 %   where a, b, c, d, and e are coefficents to the grid arrays X and Y.
 %   Background white gaussian noise is added to the image. The added noise
 %   is a percentage of the range of Z. 
@@ -11,11 +11,12 @@ function [ Z ] = genPhaseImage(dims, P, plotOpt )
 % Initial Creation Date: 9/1/2016
 % Modifications
 %   - 9/2/2016 - more documentation added, cleaned up code
+%   - 9/23/2016 - cleaned up code further
 %
 % Inputs:
 %   dims - number of rows and cols for the grid arrays X and Y
-%   P - structure containing the parameters (a, b, c, d & e)
-%   bkg - percent decimal of random noise to add
+%   P - structure containing the parameters
+%   wgnPercent - percent decimal of random white gaussian noise to add
 %   plotOpt - string - if 'yes' will plot Z as image
 %
 % Output:
@@ -30,7 +31,7 @@ ygv = -dims(1)/2:1:dims(1)/2-1;
 [X, Y] =  meshgrid(xgv, ygv);
 
 % the 2nd order surface profile
-Z = P.a*X + P.b*Y+ P.c*X.^2 + P.d*Y.^2 + P.e;
+Z = P.p00 + P.p10*X + P.p01*Y + P.p20*X.*X + P.p11*X.*Y + P.p02*Y.*Y;
 
 % the range of Z values
 Zrange = max(Z(:)) - min(Z(:)); 

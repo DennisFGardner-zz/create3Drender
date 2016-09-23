@@ -17,21 +17,22 @@
 
 %% 1) Generate simulated data
 % generate a 2nd order plane, add nosie if desired
-% equation of plane: Z = a*X + b*Y+ c*X.^2 + d*Y.^2 + e;
-%
-% What about X*Y? - should this be added too?
+% equation of plane: 
+%       Z(X, Y) = p00 + p10*x + p01*y + p20*x^2 + p11*x*y + p02*y^2;
 
 % Plane size [numberRows numberColumns]
 dims = [80, 100];
 
 % equation parameters
-P.a = 5; 
-P.b = 1; 
-P.c = 0.01; 
-P.d = 0.02; 
-P.e = 0; 
+P.p00 = 3;
+P.p10 = 5; 
+P.p01 = 1; 
+P.p20 = 0.01; 
+P.p11 = 0.25;
+P.p02 = 0.02; 
+ 
 % decimal percentage of white gaussian noise
-P.wgnPercent = 0.1; 
+P.wgnPercent = 0; 
 
 % generate the phase profile, including noise, option to plot
 plotOpt = 'yes';
