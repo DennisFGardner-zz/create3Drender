@@ -1,4 +1,4 @@
-function [ Pfit, Zfit ] = genPhaseFit( Z, xROIpts, yROIpts, zROIpts )
+function [ Pfit, Zfit ] = planeFit( Z, xROIpts, yROIpts, zROIpts )
 %genPhaseFit - generate a degree 2 fit to the phase profile
 %
 % Use the fit function to fit a degree 2 polynomial to the phase profile.

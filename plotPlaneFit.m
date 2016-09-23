@@ -1,4 +1,4 @@
-function plotPhaseFit( Z, Zfit)
+function plotPlaneFit( Z, Zfit)
 %plotPhaseFit - 3D plots of the phase profile and the fit
 %   Detailed explanation goes here
 %

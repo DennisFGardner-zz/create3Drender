@@ -1,4 +1,4 @@
-function [ Z ] = genPhaseImage(dims, P, plotOpt )
+function [ Z ] = genPlane(dims, P, plotOpt )
 %genPhaseImage - generate a 2nd order surface
 %   This is sample data for the surface fitting script. This code generates
 %   a surface profile given by:

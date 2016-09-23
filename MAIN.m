@@ -36,7 +36,7 @@ P.wgnPercent = 0;
 
 % generate the phase profile, including noise, option to plot
 plotOpt = 'yes';
-Z = genPhaseImage(dims, P, plotOpt); 
+Z = genPlane(dims, P, plotOpt); 
 
 clear dims P plotOpt
 
@@ -47,10 +47,10 @@ clear dims P plotOpt
 % Fit the phase profile from the ROI
 
 
-[ Pfit, Zfit ] = genPhaseFit(Z, xROIpts, yROIpts, zROIpts );
+[ Pfit, Zfit ] = planeFit(Z, xROIpts, yROIpts, zROIpts );
 
 % Plot the phase fit
-plotPhaseFit( Z, Zfit);
+plotPlaneFit( Z, Zfit);
 
 %% 2) Real data is loaded and fitted.
 
