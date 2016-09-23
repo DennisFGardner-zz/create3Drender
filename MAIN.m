@@ -1,11 +1,18 @@
 %% MAIN - Plane Fitting Tool
 %
-% 9/1/2016
+% In the first part of this script, test data is generated. This test data
+% is fitted to a 2nd order plane. 
 %
-% I am making a script to fit the phase background of reconstructed images.
-%
-%
-%
+% In the second part of this script, real data is loaded and fitted. 
+
+% Author: Dennis F Gardner
+% JILA, Univeristy of Colorado, 440 UCB, Boulder, CO 80309
+% email: dennis.gardner@colorado.edu
+% Website 1: http://www.github.com/DennisFGardner 
+% Website 2: http://www.linkedin.com/in/dennisfgardner
+% File Creation: Sept. 1st, 2016
+% Modifications: Sept. 23, 2016
+
 %% Preamble
 
 % change the working directory
